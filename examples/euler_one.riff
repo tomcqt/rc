@@ -1,0 +1,13 @@
+1000 > m;  @ set m to 1000
+,[] > s; @ set s to an empty list
+
+* m { @ for m
+  ? _%3=0 { @ if _ % 3 = 0
+    _ +> s; @ append _ to s
+  }
+  !? _%5=0 { @ if _ % 5 = 0
+    _ +> s; @ append _ to s
+  }
+}
+
+$s[s] > .; @ print the sum of list "s" to console

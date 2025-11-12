@@ -1,0 +1,2 @@
+tests/error_test_unmatched_brace.riff:5:1: error: unmatched '{'
+  Opening brace at line 2 never closed

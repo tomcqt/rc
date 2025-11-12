@@ -1,0 +1,4 @@
+tests/error_test_unmatched_bracket.riff:2:1: error: unmatched '['
+  Opening bracket at line 1 never closed
+
+ - missing binary

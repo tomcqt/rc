@@ -1,0 +1,16 @@
+[package]
+name = "rc"
+version = "0.1.0"
+edition = "2021"
+authors = ["tomcat <hi@tomcat.sh>"]
+description = "Riff compiler - compile Riff source code to standalone executables"
+license = "MIT"
+repository = "https://github.com/tomcqt/rc"
+
+[dependencies]
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1
+strip = true

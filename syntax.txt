@@ -1,0 +1,70 @@
+riff documentation
+
+commands:
+
+x>y - sends x into y
+.   - console, used with > to print
+?+  - true
+?-  - false
+=   - equals operator
+>>  - greater than
+<<  - less than
+>=  - greater than or equal to
+<=  - less than or equal to
+;   - eol character
+@   - comment
+<@  - multiline comment start
+@>  - multiline comment end
+^   - power
+%   - modulo
++   - addition
+-   - subtraction
+*   - multiplication
+/   - division
+&   - return (used with > in a function)
+,[] - list
+!   - not
+||  - or
+&&  - and
+|   - break
+!|  - continue
++>  - add to variables
+->  - subtract from variables
+*>  - multiply variables
+/>  - divide variables
+^>  - power variables
+%>  - modulo variables
+
+
+$a[b,c]{d} - function called "a" with arguments "b" and "c" has code "d"
+a[b,c]       - calls function "a"
+*[a]{b}      - runs b a times (square brackets are optional) ("_" will be the index of the loop, as a list if there are multiple nested loops)
+*?[?+]{a}   - while loop (this one will run "a" forever)
+?a=a{}          - if statement (evaluates to true in this case) (can also use square brackets around a=a)
+!?a=a{}         - else if
+!!a=a{}         - else
+
+assigning variables:
+int: 0>a
+str: "hello">b
+bool: ?+>c
+list: ,[0,1,2]>d
+
+multiple: anything > c, d
+
+get list index: 
+d[1] -> 1
+d[0] -> 0
+d[-1] -> 2
+
+MACROS!
+
+(used with $)
+
+$s[list] - gives the sum of a list
+
+can use numbers with e syntax
+ex:
+
+1000 = 1e3
+4500000 = 45e5

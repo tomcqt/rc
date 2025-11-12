@@ -1,0 +1,12 @@
+@ Project Euler #2
+
+,[1, 2] > f; @ set f to a list with 1 and 2
+,[2] > e;    @ set e to a list with 2
+
+*? f[-1] < 4000000 { @ while loop until the last element of "f" is greater than or equal to 4 million
+  f[-1] + f[-2] > s; @ set "s" to the last 2 elements of f added together
+  s +> f; @ append "s" to "f"
+  ? s % 2 = 0 { s +> e } @ if "s" is even, add it to "e"
+}
+
+$s[e] > .; @ print the sum of list "e"

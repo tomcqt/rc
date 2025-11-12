@@ -1,0 +1,21 @@
+@ Test logical OR and AND operators
+
+@ Test OR: true || false = 1
+1 > x;
+0 > y;
+x || y > result;
+result > .;
+
+@ Test AND: true && true = 1
+5 > a;
+10 > b;
+? a=5 && b=10 {
+  "AND true" > .;
+}
+
+@ Test AND false: true && false = 0
+? a=5 && b=99 {
+  "AND false" > .;
+!|
+  "AND correctly false" > .;
+}

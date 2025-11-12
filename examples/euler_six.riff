@@ -1,0 +1,5 @@
+* 101 { @ loop 101 times
+  _ ^ 2 +> a; @ add _ ^ 2 to a
+  _ +> b; @ add _ to b
+}
+b ^ 2 - a > .; @ print b ^ 2 - a to console

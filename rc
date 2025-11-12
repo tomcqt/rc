@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+set -e
+
+# repo root (script directory)
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+TARGET="$SCRIPT_DIR/target/debug/rc"
+
+# rebuild if missing or sources/Cargo.toml are newer than the binary
+if [ ! -x "$TARGET" ] || [ "$SCRIPT_DIR/Cargo.toml" -nt "$TARGET" ] || [ -n "$(find "$SCRIPT_DIR/src" -type f -newer "$TARGET" -print -quit)" ]; then
+  echo "[i] building rc (cargo build)..."
+  (cd "$SCRIPT_DIR" && cargo build)
+fi
+
+exec "$TARGET" "$@"

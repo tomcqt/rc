@@ -1,0 +1,4 @@
+10 > m;
+* m {
+  m +> m;
+  @ missing closing brace
